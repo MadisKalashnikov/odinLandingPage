@@ -1,0 +1,42 @@
+@import "utility", "mixins";
+
+// header
+header {
+	background-color: #1f2937;
+	display: flex;
+	justify-content: center;
+}
+// header wrapper
+.header-wrapper {
+	display: flex;
+	@include wrapper;
+	align-items: center;
+	justify-content: space-between;
+}
+.img {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	color: white;
+
+	#{&}-logo {
+		width: 100px;
+	}
+}
+
+.nav {
+	display: flex;
+	list-style: none;
+	color: white;
+	gap: 10px;
+	padding: 5px 15px;
+
+	#{&}-item {
+		font-size: 18px;
+
+		&:hover {
+			text-decoration: underline;
+			cursor: pointer;
+		}
+	}
+}
