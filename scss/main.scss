@@ -2,9 +2,13 @@
 
 // header
 header {
-	background-color: #1f2937;
+	background-color: $primary-color;
 	display: flex;
 	justify-content: center;
+	position: fixed;
+	top: 0;
+	z-index: 100;
+	width: 100%;
 }
 // header wrapper
 .header-wrapper {
@@ -12,6 +16,8 @@ header {
 	@include wrapper;
 	align-items: center;
 	justify-content: space-between;
+	background-color: $primary-color;
+	opacity: 0.99;
 }
 .img {
 	display: flex;
@@ -21,6 +27,11 @@ header {
 
 	#{&}-logo {
 		width: 100px;
+	}
+	h2 {
+		font-size: 22px;
+		font-family: 'Courier New', Courier, monospace;
+		letter-spacing: -1px;
 	}
 }
 
@@ -33,10 +44,171 @@ header {
 
 	#{&}-item {
 		font-size: 18px;
-
+		text-decoration: underline 0.1em rgba(255, 255, 255, 0);
+		text-underline-offset: 5px;
+		transition: text-decoration-color 300ms;
 		&:hover {
-			text-decoration: underline;
+			text-decoration: underline 0.15em rgba(255, 255, 255, 1);
 			cursor: pointer;
 		}
 	}
+}
+
+// hero section
+.hero-wrapper {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	background-color: $primary-color;
+	padding-top: 150px;
+	padding-bottom: 50px;
+}
+.hero {
+	display: flex;
+	flex-wrap: wrap;
+	@include wrapper;
+	justify-content: space-between;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	padding: 0 25px;
+	gap: 25px;
+	img {
+		position: relative;
+		max-width: 550px;
+		height: auto;
+	}
+	// hero left
+	#{&}-left {
+		max-width: 600px;
+		h1 {
+			font-size: 50px;
+			max-width: 370px;
+		}
+		p {
+			font-size: 18px;
+			padding: 10px 0px;
+		}
+		button {
+			padding: 8px 20px;
+			background-color: $btn-color;
+			color: white;
+			font-weight: 700;
+			border-radius: 5px;
+			border: none;
+
+		}
+	}
+	// hero right
+	#{&}-right {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		max-width: 600px;
+		h3 {
+			position: absolute;
+			color: white;
+			z-index: 2;
+			font-size: 30px;
+			font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+			max-width: 220px;
+			text-align: center;
+			text-transform: capitalize;
+		}
+		.overlay {
+			position: absolute;
+			background-color: black;
+			opacity: 0.3;
+			z-index: 1;
+			bottom: 0;
+			height: 100%;
+			width: 100%;
+		}
+	}
+}
+
+.info-wrapper {
+	text-align: center;
+	padding: 35px;
+
+	.info {
+		padding: 35px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 50px;
+	}
+	.card {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 10px;
+
+	.card-img {
+		width: 200px;
+		flex-shrink: 0;
+		height: 200px;
+		border: 1px solid $btn-color;
+		border-radius: 20px;
+		}
+	p {
+		max-width: 200px;
+	}
+	}
+}
+
+.quote-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 35px;
+	background-color: $quote-bg;
+	height: 400px;
+	.quote {
+		display: flex;
+		flex-direction: column;
+		#quote {
+			max-width: 700px;
+			@include quoteText
+		}
+
+		#author {
+			margin-right: 0;
+			margin-left: auto;
+		}
+	}
+}
+
+.action-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 300px;
+	.action {
+		background-color: $btn-color;
+		display: flex;
+		max-width: 1200px;
+		color: white;
+		width: 100%;
+		justify-content: space-between;
+		align-items: center;
+		padding: 50px;
+		border-radius: 10px;
+
+		button {
+			padding: 0px 20px;
+			font-size: 20px;
+			border: 2px solid white;
+			border-radius: 10px;
+			background-color: transparent;
+			color: white;
+			height: 40px;
+			display: flex;
+			align-items: center;
+		}
+	}
+
 }
