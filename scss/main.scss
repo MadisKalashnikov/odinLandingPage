@@ -11,7 +11,7 @@ header {
 	width: 100%;
 }
 // header wrapper
-.header-wrapper {
+.header-container {
 	display: flex;
 	@include wrapper;
 	align-items: center;
@@ -55,7 +55,7 @@ header {
 }
 
 // hero section
-.hero-wrapper {
+.hero-container {
 	display: flex;
 	width: 100%;
 	justify-content: center;
@@ -63,7 +63,7 @@ header {
 	padding-top: 150px;
 	padding-bottom: 50px;
 }
-.hero {
+.hero-wrapper {
 	display: flex;
 	flex-wrap: wrap;
 	@include wrapper;
@@ -128,11 +128,11 @@ header {
 	}
 }
 
-.info-wrapper {
+.info-container {
 	text-align: center;
 	padding: 35px;
 
-	.info {
+	.info-wrapper {
 		padding: 35px;
 		display: flex;
 		align-items: center;
@@ -160,14 +160,14 @@ header {
 	}
 }
 
-.quote-wrapper {
+.quote-container {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	padding: 35px;
 	background-color: $quote-bg;
 	height: 400px;
-	.quote {
+	.quote-wrapper {
 		display: flex;
 		flex-direction: column;
 		#quote {
@@ -182,12 +182,12 @@ header {
 	}
 }
 
-.action-wrapper {
+.action-container {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	height: 300px;
-	.action {
+	.action-wrapper {
 		background-color: $btn-color;
 		display: flex;
 		max-width: 1200px;
@@ -210,5 +210,15 @@ header {
 			align-items: center;
 		}
 	}
-
+}
+.footer-container {
+	background-color: $primary-color;
+	color: white;
+	height: 100px;
+	.footer-wrapper {
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 }
